@@ -21,7 +21,11 @@ Likewise, if instead we wanted `url(tobi.png)`, we could pass `paths: [__dirname
 
       stylus(str)
         .set('filename', __dirname + '/css/test.styl')
-        .define('url', stylus.url({ paths: [__dirname + '/public'] }))
+        .define('url', stylus.url({
+          paths: [__dirname + '/public'],
+          limit: 55000,
+          retina: true
+        }))
         .render(function(err, css){
 
         });
@@ -30,3 +34,4 @@ Likewise, if instead we wanted `url(tobi.png)`, we could pass `paths: [__dirname
 
   - `limit` bytesize limit defaulting to 30Kb (30000), use `false` to disable the limit
   - `paths` image resolution path(s)
+  - `retina` checks the filesystem for files of the format name.@2x.ext and uses those if they exist. Use this option to compile a seperate retina stylesheet (include it with <link media="only screen and (-webkit-min-device-pixel-ratio: 2)">. boolean (default: false)

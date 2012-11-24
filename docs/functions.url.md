@@ -34,4 +34,4 @@ Likewise, if instead we wanted `url(tobi.png)`, we could pass `paths: [__dirname
 
   - `limit` bytesize limit defaulting to 30Kb (30000), use `false` to disable the limit
   - `paths` image resolution path(s) to map files defined in Stylus to files on the local filesystem
-  - `retina` checks the filesystem for files of the format `{name}.@2x.{ext}` and uses those if they exist. Use this option to compile a seperate retina stylesheet (include it with `<link media="only screen and (-webkit-min-device-pixel-ratio: 1.5)">`. boolean (default: false)
+  - `retina` checks the filesystem for files of the format `{name}.@2x.{ext}` and uses those if they exist. Use this option to compile a separate retina stylesheet (include it with `<link media="only screen and (-webkit-min-device-pixel-ratio: 1.5)">`. boolean (default: false)

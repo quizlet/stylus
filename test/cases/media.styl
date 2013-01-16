@@ -4,6 +4,21 @@
     margin 3cm
     padding 0
 
+min_width = 21cm
+max_width = '29cm'
+min_width < @x < max_width
+  body
+    margin 3cm
+    padding 0
+
+300px < @x
+	body
+		margin 5cm
+
+@x < max_width
+	body
+		margin 5cm
+
 @media print
   @page :left
     margin-left 5px

@@ -17,7 +17,11 @@ The `.define(name, callback)` method assigned a JavaScript function that can be 
 
       stylus(str)
         .set('filename', __dirname + '/css/test.styl')
-        .define('url', stylus.url())
+        .define('url', stylus.url({
+          paths: [__dirname + '/public'],
+          limit: 55000,
+          retina: true
+        }))
         .render(function(err, css){
     
         });
@@ -36,4 +40,5 @@ Likewise, if instead we wanted `url(tobi.png)`, we could pass `paths: [__dirname
 ## Options
 
   - `limit` bytesize limit defaulting to 30Kb (30000), use `false` to disable the limit
-  - `paths` image resolution path(s)
+  - `paths` image resolution path(s) to map files defined in Stylus to files on the local filesystem
+  - `retina` checks the filesystem for files of the format `{name}.@2x.{ext}` and uses those if they exist. Use this option to compile a separate retina stylesheet (include it with `<link media="only screen and (-webkit-min-device-pixel-ratio: 1.5)">`. boolean (default: false)

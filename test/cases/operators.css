@@ -38,3 +38,22 @@ body {
   foo: X::Micrsoft::crap(#0f0);
   foo: <foo, bar, baz>;
 }
+body {
+  foo: true;
+  foo: true;
+  foo: true;
+  foo: true;
+  foo: true;
+  foo: true;
+  foo: true;
+  foo: true;
+  foo: true;
+  foo: true;
+}
+body {
+  foo: 'bar';
+}
+body {
+  width: 'em';
+  height: false;
+}

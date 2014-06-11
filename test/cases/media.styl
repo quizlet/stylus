@@ -4,28 +4,44 @@
     margin 3cm
     padding 0
 
-min_width = 21cm
-max_width = '29cm'
-min_width < @width < max_width
-  body
-    margin 3cm
-    padding 0
-
-300 < @width
-	body
-		margin 5cm
-
-@width < max_width
-	body
-		margin 5cm
-
-@height < 300 and @width < 500px
-	body
-		margin 5cm
-
 @media print
   @page :left
     margin-left 5px
   @page :right
     margin-right 5px
 
+.foo
+  if true {
+    width 50%
+    @media screen and (max-width: 500px) {
+      width 100%
+    }
+  }
+
+.bar
+  if false {
+    // nothing
+  } else if true {
+    width 50%
+    @media screen and (max-width: 500px) {
+      width 100%
+    }
+  }
+
+.baz
+  if false {
+    // nothing
+  } else {
+    width 50%
+    @media screen and (max-width: 500px) {
+      width 100%
+    }
+  }
+
+.quux
+  font-weight bold
+  @media screen
+    if false
+      background-position 45px 0px
+    else
+      background-position 100px 0px

@@ -1,9 +1,13 @@
+---
+layout: default
+permalink: docs/css-style.html
+---
 
-## CSS Style
+# CSS Style Syntax
 
  Stylus transparently supports a regular CSS-style syntax. This means you don't need an alternative parser, or specify that a certain file uses a specific style.
 
-### Example
+## Example
 
  Below is a small style using the indented approach:
  
@@ -41,6 +45,28 @@
        border: 1px solid;
        border-radius: 5px;
      }
+
+While Stylus don't support _every_ possible CSS-like syntax, if can understand even such code:
+
+        border-radius() {
+          -webkit-border-radius: arguments;
+          -moz-border-radius: arguments;
+          border-radius: arguments;
+        }
+
+    body a
+    {
+      font: 12px/1.4 "Lucida Grande", Arial, sans-serif;
+        background: black;
+      color: #ccc;
+    }
+
+        form input {
+          padding: 5px;
+      border: 1px solid;
+          border-radius: 5px;
+          }
+
 
  Since we may mix and match the two variants, the following is valid as well:
  

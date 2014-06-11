@@ -1,8 +1,15 @@
+---
+layout: default
+permalink: docs/operators.html
+---
+
+# Operators
 
 ## Operator Precedence
 
 Below is the operator precedence table, highest to lowest:
 
+     .
      []
      ! ~ + -
      is defined
@@ -54,7 +61,7 @@ The logical `not` operator has low precedence, therefore the following example c
     
     !a and !b
     // => false
-    // pased as: (!a) and (!b)
+    // parsed as: (!a) and (!b)
 
 With:
 
@@ -66,7 +73,17 @@ With:
 
 ### Subscript []
 
- The subscript operator allows us to grab a value inside an expression via index. Parenthesized expressions may act as tuples (e.g. `(15px 5px)`, `(1 2 3)`).
+ The subscript operator allows us to grab a value inside an expression via index (zero-based).
+ Negative index values starts with the last element in the expression.
+
+     list = 1 2 3
+     list[0]
+     // => 1
+
+     list[-1]
+     // => 3
+
+ Parenthesized expressions may act as tuples (e.g. `(15px 5px)`, `(1 2 3)`).
  
  Below is an example that uses tuples for error handling (and showcasing the versatility of this construct):
  
@@ -104,6 +121,9 @@ With:
 
      1...5
      // => 1 2 3 4
+
+     5..1
+     // => 5 4 3 2 1
 
 ### Additive: + -
 

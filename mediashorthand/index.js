@@ -11,7 +11,7 @@ module.exports = function () {
     var captures;
     if (captures = /^([ \t]*)((([0-9a-zA-Z_-]+[ \t]*<[ \t]*@(width|height)([ \t]*<[ \t]*[0-9a-zA-Z_-]+)?)|(([0-9a-zA-Z_-]+[ \t]*<[ \t]*)?@(width|height)[ \t]*<[ \t]*[0-9a-zA-Z_-]+))( and | or )?){1,}/.exec(line)) {
       var mediaval = captures[1] + '@media ';
-      var ors = captures[2].split("or");
+      var ors = captures[0].split("or");
       for (var n = 0; n < ors.length; n += 1) {
         mediaval += 'screen';
         var statements = ors[n].split("and");

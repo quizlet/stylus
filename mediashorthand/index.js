@@ -48,8 +48,6 @@ module.exports = function () {
       var line;
       var ret = '';
 
-      var d = new Date().getTime();
-
       for (var i=0; i < lines.length; i++) {
         line = lines[i];
         if (/@(height|width)/.test(line)) {
@@ -58,8 +56,6 @@ module.exports = function () {
           ret += line + '\n';
         }
       }
-
-      console.log("/* Spent "+(new Date().getTime() - d)+"ms inside of @media shorthand plugin */\n");
 
       return ret;
     });

@@ -1,0 +1,18 @@
+min_width = 21cm
+max_width = 29cm
+min_width < @width < max_width
+  body
+    margin 3cm
+    padding 0
+
+300px < @width
+	body
+		margin 5cm
+
+@width < max_width
+	body
+		margin 5cm
+
+@height < 300px and @width < 500px
+	body
+		margin 5cm

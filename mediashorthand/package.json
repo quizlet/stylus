@@ -1,0 +1,12 @@
+{
+  "name": "stylus-mediashorthand-plugin",
+  "description": "Stylus @media query shorthands",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  }
+}

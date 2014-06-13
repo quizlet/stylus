@@ -1,12 +1,11 @@
-Media Shorthand Stylus Plugin
+Media Shorthand Stylus Preprocessor
 =============================
 
-Stylus plugin that allows us to use `@width` and `@height` as shortcuts for media queries.
+Stylus preprocessor that allows us to use `@width` and `@height` as shortcuts for media queries.
 
 Requirement
 -----------
-Stylus doesn't support plugin hooks prior to render. We custom added a hook through
-https://github.com/quizlet/stylus/commit/a33c6fc
+Stylus doesn't support plugin hooks prior to parse. We custom added a hook in `parser.js`.
 
 Examples
 --------

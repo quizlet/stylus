@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = function (stylusCode) {
 
   // Private helper
   function toMedia(dir, min, max) {
@@ -42,6 +42,10 @@ module.exports = function () {
   }
 
   return function (stylusCode) {
+    if (typeof stylusCode !== 'string') {
+      return stylusCode;
+    }
+
     var lines = stylusCode.split('\n');
     var line;
     var ret = '';

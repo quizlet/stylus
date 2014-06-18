@@ -1,0 +1,32 @@
+/** main **/
+body {
+  color: #f00;
+}
+body {
+  color: #00f;
+}
+body a {
+  color: #f00;
+}
+body {
+  color: #00f;
+}
+body .nested {
+  color: #f00;
+}
+body {
+  color: #f00;
+  width: 100px;
+}
+body {
+  color: #666;
+}
+a:hover {
+  color: #333;
+}
+h1 {
+  font-family: 'Economica', sans-serif;
+}
+a:hover {
+  color: #000;
+}

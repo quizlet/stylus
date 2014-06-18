@@ -1,0 +1,21 @@
+@media screen and (min-width: 21cm) and (max-width: 29cm) {
+  body {
+    margin: 3cm;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 300px) {
+  body {
+    margin: 5cm;
+  }
+}
+@media screen and (max-width: 29cm) {
+  body {
+    margin: 5cm;
+  }
+}
+@media screen and (max-height: 300px) and (max-width: 500px) {
+  body {
+    margin: 5cm;
+  }
+}

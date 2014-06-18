@@ -1,3 +1,265 @@
+0.46.3 / 2014-06-09
+===================
+
+  * Fixed parse error, #1582.
+
+0.46.2 / 2014-06-04
+===================
+
+  * Fixed regression with double writing of transparent mixin value, #1574.
+
+0.46.1 / 2014-06-04
+===================
+
+  * Fixed regression with a root reference in interpolated selectors, #1573.
+
+0.46.0 / 2014-06-03
+===================
+
+  * Added support for nested media queries, #1540.
+  * Added `convert` built-in funciton, #1545.
+  * Added negative index values support for subscripts, #1564.
+  * Add short-circuit evaluation for logical operators, #1532.
+  * Fixed the dropped commas in splat arguments, #1525.
+  * Fixed double-writing the `@media` and other at-rules in mixins, #1535.
+  * Fixed unit expression precedence error, #1537.
+  * Fixed comments inside the property expressions, #1538.
+  * Fixed handling of the `@css` and `unquote` inside groups, #1527.
+  * Fixed incorrect line numbers on errors, #1543.
+  * Fixed import cloning with cache, #1548.
+  * Fixed cloning to preserve `property.literal`, #1558.
+  * Fixed bifs arguments cloning bug, #1560.
+  * Fixed bug with nested interpolated selectors with a comma, 1568.
+  * Fixed `current-property` ignored in property lookup, #1565.
+  * Fixed `current-property`'s value to be evaluated in the right context, #1562.
+  * Fixed spaces and comments inside a hash declaration, #1554.
+  * Fixed aliases for transparent mixins, #1557.
+  * Fixed compilation fail when 'dest' path doesn't end with '/', #1541.
+  * Fixed bug with CSS to Stylus `@keyframes` converting, #1549.
+
+0.45.1 / 2014-05-16
+===================
+
+  * Fixed regression with `@require` and globbed paths inside functions, #1529.
+
+0.45.0 / 2014-05-11
+===================
+
+  * Added support for more CSS-like syntax variants: indented code blocks, closing curly brace on the same line with props etc (as now ignoring meaningless tokens while parsing), #1506.
+  * Added support for block-level `@import` and `@require`, #1495.
+  * Added hash values support in `@media`, #1504.
+  * Added coercion for pt units, #1483.
+  * Added a way to escape `\` in a tag name, #1487.
+  * Fixed trailing spaces and comments in the selector groups, #1499.
+  * Fixed comments in the selector parts (now ignoring them), #1517.
+  * Fixed bug with url string having a protocol, #1510.
+  * Fixed bug with `@scope` and complex selectors, #1505.
+  * Fixed the recursion with the `display: block` inside block mixins, #1515.
+  * Fixed bug with current-property and block mixins, #1512.
+  * Fixed bug with complex selectors in conditionals, #1500.
+  * Fixed bug with `@media` bubbling and conditionals, #1518.
+  * Fixed bug with newlines and comments in conditionals, #1520.
+  * Fixed bug with the variable in the first line of mixin, #1502.
+  * Fixed but with the variable right after iterating over an empty list, #1503.
+  * Fixed bug with built-in function calls inside a hash assignment, #1488.
+  * Fixed bug with `*` selector first in the group, #1498.
+  * Fixed unnecessary bubbling for `@keyframes`, #1490.
+  * Fixed bug with undefined `filename` on keyframes, #1485.
+
+0.44.0 / 2014-04-23
+===================
+
+  * Major performance tuning and basic caching support, almost ⨉2 build time boost, #1428.
+  * Added basic support for most at-rules, #1464.
+  * Added `+cache` built-in mixin for caching the result of functions and mixins into placeholders, #1466.
+  * Added `current-media()` bif that returns the string for the current media query, #1466.
+  * Added `called-from` property in functions that contains the names of the functions from the call stack till the current one, #1466.
+  * Added a way to escape commas and parent references inside selectors, #1413.
+  * Removed the never needed `-ms-` prefix for keyframes.
+  * Fixed rendering of multiple selectors inside interpolation, #1413.
+
+0.43.1 / 2014-04-07
+===================
+
+  * Fixed regression with `only` keyword, #1460.
+
+0.43.0 / 2014-04-05
+===================
+
+  * Added better support for media queries — interpolations, expressions in values and more, #1453.
+  * Added `define` bif, #1382.
+  * Add `--prefix` option for CLI and `+prefix-classes` mixin, #1420.
+  * Added `--deps` flag to list the dependencies of the compiled file and stylus.deps function, #1429.
+  * Added support for multiple selectors in `@extend`, #1419.
+  * Added the support of the hash objects to `define`, #1444.
+  * Fixed some floating point problems in maths, #1339.
+  * Fixed the lost decimal part of units can when coercing from a string, #1387.
+  * Fixed bug with hash lookup when a property name is the same as a name of local variable, #1433.
+  * Fixed bug with the `+=` operator with strings, #1423.
+  * Fixed a bug in recompiling of the files with `--watch`, #1435.
+  * Fixed `default` value for `cursor` property (Temporally remove `default` from the pseudo-classes list), #1438.
+  * Fixed the rendering of empty `@keyframes`, #1442.
+  * Fixed parseColor for single digit integers in rgb(a) strings, #1447.
+  * Fixed wrong named colors, #1450.
+
+
+0.42.3 / 2014-03-03
+==================
+
+  * Fixed bug with pseudo-elements as part of the nested selector with a class, #1415.
+  * Ignoring comments in REPL, #1390.
+  * Fixed bug with print of the line numbers when node has empty `nodes` array, #1412.
+  * Fixed bug with first argument for defaulted arguments, #1407.
+  * Fixed compression of blocks with nested rules, #1396.
+  * Fixed bug with importing of files with `.css` in the dirname, #1385.
+  * Fixed eaten whitespace after selector with a keyword, #1383.
+
+0.42.2 / 2014-01-30
+==================
+
+  * Added support for reverse ranges.
+  * Fixed bug with an expression as arguments of function call.
+  * Fixed bug with property lookup inside `@block`.
+  * Fixed bug with parsing an attribute selector.
+  * Fixed bug with `add-property` inside function call.
+  * Fixed compiling to a directory with `.styl` in the name.
+  * Fixed bug with missed `mtime` in middleware imports.
+  * Fixed an incorrect line number in multi-line group selectors.
+  * Fixed incorrect file path in win32 debug info, #1353.
+
+0.42.1 / 2014-01-19
+==================
+
+  * Fixed color functions to fallback into literal CSS functions, #1340.
+  * Fixed `@import` globbing with `--watch`.
+  * Fixed Bug with units as part of the selector.
+  * Fixed compiling with UTF-8 BOM.
+  * Added Icons, and reorganization of graphics folder, #1346.
+
+0.42.0 / 2014-01-06
+==================
+
+  * Added `@require`, #1287.
+  * Added more lookup patterns for the `@import` and `@require`. Support Node.js modules, #1316.
+  * Added file globbing, #1306 and #1013.
+  * Added root reference, part of #1240.
+  * Added basic support for `@block` entity, #1290.
+  * Added string support for `selector()` bif, #1279.
+  * Added options as an optional argument for `use()` bif, #1297.
+  * Added some new colors shortcuts: grayscale, complement, tint & shade, #1308.
+  * Fixed broken @media queries in logic blocks, #1289.
+  * Fixed function call inside block mixin is on the `block` variable pass, #1285.
+  * Fixed bug with `if` and color in array check, #1301.
+  * Fixed bug with list of color keywords as default argument, #1294.
+  * Fixed bug with property lookup in @media queries, #1315.
+  * Now using `css-parse` instead of `CSSOM` for converting CSS -> Stylus, #1307.
+
+0.41.3 / 2013-12-12
+==================
+  
+  * Fixed regression for `selector`, #1278.
+
+0.41.2 / 2013-12-10
+==================
+  
+  * Fixed property lookup in blocks, #1273.
+  * Fixed @extend in blocks, #1274.
+  * Fixed if-else-if-else, #1276.
+
+0.41.1 / 2013-12-08
+==================
+
+  * Fixed inaccessible local variable inside conditional which is inside a selector, #1267.
+  * Fixed some minor issues with `selector()` interpolation, #1259.
+  * Fixed missing hashes in base64 converted urls, #1263.
+  * Fixed conditionals inside `@font-face`, #1268.
+
+0.41.0 / 2013-11-30
+==================
+
+  * Added basic [block mixins](http://learnboost.github.io/stylus/docs/mixins.html#block-mixins) (`+foo`) with block interpolation (`block`), #1223.
+  * Added [`selector()` bif](http://learnboost.github.io/stylus/docs/selectors.html#selector-bif), #1249.
+  * Added [hash interpolation to blocks](http://learnboost.github.io/stylus/docs/hashes.html#interpolation), #1202.
+  * Fixed parent reference in root context from returning `&`.
+  * Fixed bug with double writing media blocks, 1ed44a81
+  * Fixed a lot of regressions after hashes, #1230, #1236, #1237, #1248.
+
+0.40.3 / 2013-11-16
+==================
+
+  * Fixed current-property to be available in function evaluation context, #1211.
+  * Fixed another regression, #1215.
+
+0.40.2 / 2013-11-12
+==================
+
+  * Fixed regression after the #1185, #1207.
+
+0.40.1 / 2013-11-12
+==================
+
+  * Fixed assign to hashes using dot, #1201.
+  * Fixed regression from the #1185.
+  * Fixed precedence of the subscript operator, #1189.
+  * Fixed imports in functions, #1192.
+  * Fixed compressing of time units, #1204.
+
+0.40.0 / 2013-11-05
+==================
+
+  * Allow multiple `end` event handlers + optional result css modification, #1180.
+  * Added Support for proper hashes in json config, #1186.
+  * Allow functions accept object literal as an argument, #1184.
+  * Fixed another infinite loop (`a[` etc.), #1187.
+  * Fixed bug in hashes subassigns with functions, #1181.
+  * Fixed "is" attribute selectors fail, #1185.
+
+0.39.4 / 2013-11-03
+==================
+
+  * Fixed another regression after #1150, #1183.
+
+0.39.3 / 2013-11-01
+==================
+
+  * Fixed parse error in conditional statement without `()`, #1178.
+
+0.39.2 / 2013-10-31
+==================
+
+  * Fixed other regressions after #1150, #1175.
+
+0.39.1 / 2013-10-30
+==================
+
+  * Fixed regression after #1150, #1172.
+
+0.39.0 / 2013-10-30
+==================
+
+  * Added basic hashes support, #1150.
+  * Allow to inject Evaluator via Renderer's options, #1149.
+  * Fixed infinite loop case, #1147.
+  * Fixed Bug with `else if match`, #1154.
+  * Fixed schemaless absolute urls for `url`, #1148.
+  * Fixed urls in windows 7 for `--relative-url`, #1156.
+  * Fixed calculation inside `calc` CSS function, #1133.
+  * Fixed parsing shorthand colors from json config, #1158.
+
+0.38.0 / 2013-09-24
+==================
+
+  * Fixed `push` not to modify the first element of another array, #1118.
+  * Fixed property lookup from mixins, #1127.
+  * Fixed support for `src` and `dest` in middleware, started tests for middleware #1143.
+  * Fixed `--resolve-url` that removed tails from urls, #1126.
+  * Fixed mime type for `.woff`, #1128.
+  * Fixed `.toString` for undefined functions, #1119.
+  * Fixed path overlap for non-string dest, #1115.
+  * Fixed `path.resolve` for nonœ-true resolveURL, #1116.
+  * Fixed sync return in `stylus.render()`, #1138.
+  * Fixed duplicate calls from `this.calling`, #1122.
+
 0.37.0 / 2013-08-19
 ==================
 

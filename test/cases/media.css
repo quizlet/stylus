@@ -4,32 +4,43 @@
     padding: 0;
   }
 }
-@media screen and (min-width: 21cm) and (max-width: 29cm) {
-  body {
-    margin: 3cm;
-    padding: 0;
-  }
-}
-@media screen and (min-width: 300px) {
-  body {
-    margin: 5cm;
-  }
-}
-@media screen and (max-width: 29cm) {
-  body {
-    margin: 5cm;
-  }
-}
-@media screen and (max-height: 300px) and (max-width: 500px) {
-  body {
-    margin: 5cm;
-  }
-}
 @media print {
   @page :left {
     margin-left: 5px;
   }
   @page :right {
     margin-right: 5px;
+  }
+}
+.foo {
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .foo {
+    width: 100%;
+  }
+}
+.bar {
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .bar {
+    width: 100%;
+  }
+}
+.baz {
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .baz {
+    width: 100%;
+  }
+}
+.quux {
+  font-weight: bold;
+}
+@media screen {
+  .quux {
+    background-position: 100px 0px;
   }
 }

@@ -1,3 +1,44 @@
+0.47.3 / 2014-07-22
+===================
+
+  * Fixed support for schema-less urls inside `url()`.
+
+0.47.2 / 2014-07-19
+===================
+
+  * Fixed comma-first multiline syntax, #1634.
+  * Fixed hsla arguments for different color functions, #1619.
+  * Fixed Bug with @media and placeholder selectors, #1625.
+  * Fixed bug with nested media queries, 1620.
+  * Fixed broken URL parsing for source and destination paths, #1613.
+
+0.47.1 / 2014-07-02
+===================
+
+  * Fixed treatment of unknown pseudo-elements, #1608.
+  * Fixed unit expression precedence error, #1611.
+
+0.47.0 / 2014-07-01
+===================
+
+  * Added support for anonymous functions, #1580.
+  * A lot of better color functions, #1526:
+      * Added support for two arguments for `hsla`.
+      * Added component setters (`red`, `hue`, `alpha` etc.).
+      * Added `luminosity` bif.
+      * Added `blend` bif.
+      * Added `contrast` bif.
+      * Added `transparentify` bif.
+  * Added `list-separator` bif, #1576.
+  * Added symlinks support to CLI, #1577.
+  * Added idents and units coercion, #1605.
+  * Fixed `@keyframes` parsing issue.
+  * Fixed parse error when `{` is on a new line in at-rules.
+  * Fixed an issue with multiline parsing.
+  * Fixed another issue with cached imports, #1587.
+  * Fixed illegal unary "%", missing left-hand operand, #1586.
+  * Reverted #1527.
+
 0.46.3 / 2014-06-09
 ===================
 

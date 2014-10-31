@@ -1,3 +1,39 @@
+0.49.2 / 2014-10-14
+===================
+
+  * Fixed regression #1727 + small fixes for #1717.
+  * Fixed nested selectors when using nested and bubbled media queries.
+  * Fixed issue when mixin's block is used as part of a property value.
+  * Fixed hardcoded `.styl` extension from CLI (added `extname` arg).
+
+0.49.1 / 2014-09-24
+===================
+
+  * Fixed an output order of nested media queries.
+  * Fixed regression with cached nodes.
+  * Fixed support for `Woff2` and `WebP` mime-tipes, #1699.
+
+0.49.0 / 2014-09-22
+===================
+
+  * Added a way to use plugins in stylus.render options, #1697.
+  * Added LRU for memory caching.
+  * Now returning literal CSS on parser error when `--resolve-url` is set.
+  * Now not showing JS stack trace for stylus' `error()` calls.
+  * Fixed inconsistent source maps' field orders.
+  * Fixed bug with calling functions inside an inline loop.
+  * Fixed bug with nested media queries inside a mixin.
+  * Fixed bug with extending nested selector inside placeholder selector.
+  * Fixed bug with alpha variable for hsla/rgba.
+  * Fixed extending of rules inside unknown at-rules.
+  * Fixed incorrect merging of media queries using variables.
+  * Fixed bubbling for `@keyframes`.
+  * Fixed incorrect `@supports` parsing.
+  * Fixed `url()` support for `@namespace`.
+  * Fixed incorrect filename and column information for cached nodes.
+  * Fixed `--sourcemap-base` to be ignored when `--out` is present.
+  * Fixed outputting sourcemap log message when `--print` was present.
+
 0.48.1 / 2014-08-21
 ===================
 

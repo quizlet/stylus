@@ -34,7 +34,7 @@
     background-color: #bf5340;
   }
 }
-@media all and (min-width: 100px), only print and (width: 100px), (monochrome) {
+@media all and (min-width: 100px /* foo */), only print and (width: 100px), (monochrome) {
   body {
     color: #0c0;
   }
@@ -196,4 +196,14 @@ body {
   .foo {
     font-size: 1em;
   }
+}
+@media print {
+  .test {
+    background-color: #800080;
+  }
+}
+@media print {
+@import 'print.css';
+
+  body { color: red }
 }

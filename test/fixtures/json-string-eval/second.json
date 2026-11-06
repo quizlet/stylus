@@ -1,0 +1,4 @@
+{
+  "stolen": "from-second-file",
+  "again": "use(\"marker-plugin.js\")"
+}
